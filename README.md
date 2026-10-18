@@ -1,3 +1,9 @@
+## In plain English
+
+This project turns inconsistent weekly sales files into one clean, trustworthy dataset. It checks the files before delivery and stops the process when something is wrong, so bad data does not quietly reach the next step.
+
+**Status:** Working demonstration using synthetic data.
+
 # Customer data delivery
 
 Three pharmacies send their weekly sales files, each in their own format and with their own mess. Every Monday this turns them into one clean, tested table, and delivers it only if every check passes. Adding a fourth pharmacy takes a settings file, not new code.
