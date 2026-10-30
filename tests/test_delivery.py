@@ -24,7 +24,7 @@ def files():
 
 def test_settings_files_are_valid():
     names = [c.customer for c in load_customers()]
-    assert {"northside", "harbour", "valley"} <= set(names)
+    assert {"northside", "harbour", "valley"} == set(names)
 
 
 def test_bad_settings_file_says_what_is_wrong(tmp_path):

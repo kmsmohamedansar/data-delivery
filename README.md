@@ -4,6 +4,8 @@ This project turns inconsistent weekly sales files into one clean, trustworthy d
 
 **Status:** Working demonstration using synthetic data.
 
+[![Tests](https://github.com/kmsmohamedansar/data-delivery/actions/workflows/tests.yml/badge.svg)](https://github.com/kmsmohamedansar/data-delivery/actions/workflows/tests.yml)
+
 # Customer data delivery
 
 Three pharmacies send their weekly sales files, each in their own format and with their own mess. Every Monday this turns them into one clean, tested table, and delivers it only if every check passes. Adding a fourth pharmacy takes a settings file, not new code.
@@ -44,6 +46,11 @@ Schedule and run history: `dagster dev -m orchestration.definitions`, then open 
 Tests: `python -m pytest` (15 tests, about a minute).
 
 ## Onboard a new customer
+
+The checked-in `customers/_lakeshore-example.yaml` is an inactive example: files
+starting with `_` are not loaded. This keeps the three-customer quick start
+working before Lakeshore's files have been generated. The onboarding command
+below writes the active `customers/lakeshore.yaml` when you are ready.
 
 ```bash
 python -m delivery.new_customer                                          # Lakeshore's first files arrive
